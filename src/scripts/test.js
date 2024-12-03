@@ -24,28 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: 3,
-            type: "open-ended",
-            question: "Menționați câte un domn al Țării Românești la care se referă sursa A, respectiv sursa B.",
-            keywords: ["Vlad Țepeș", "Mihai Viteazul"],
-            aliases: ["Vlad Drăculea", "Mihai Bravu"],
-            maxScore: 6
-        },
-        {
-            id: 4,
-            type: "open-ended",
-            question: "Scrieți o relație cauză-efect stabilită între două informații selectate din sursa B.",
-            keywords: [
-                "Autoritățile nu puteau tolera răscoala țărilor române care lovea Imperiul otoman sub aspect politic, militar și economic",
-                "zeci de mii de oameni sunt puși în mișcare spre Dunăre"
-            ],
-            aliases: [
-                "turcii reacționează la răscoala lui Mihai",
-                "răscoala atrage intervenția militară"
-            ],
-            maxScore: 7
-        },
-        {
-            id: 5,
             type: "multiple-choice",
             question: "Care dintre următoarele alianțe este menționată în sursa dată?",
             options: ["Antanta", "Puterile Centrale", "Tripla Alianță", "Liga Națiunilor"],
@@ -53,27 +31,85 @@ document.addEventListener('DOMContentLoaded', () => {
             maxScore: 2
         },
         {
-            id: 6,
-            type: "multiple-choice",
-            question: "Care sunt două bătălii victorioase menționate în sursa dată, din vara anului 1917?",
-            options: ["Mărășești", "Turtucaia", "Mărăști", "Oituz"],
-            correctAnswers: ["Mărășești", "Mărăști", "Oituz"],
+            id: 4,
+            type: "open-ended",
+            question: "Scrieţi, pe foaia de examen, litera corespunzătoare sursei care susţine că domnul organizează o campanie militară în sudul Dunării",
+            keywords: ["A"],
+            aliases: [],
             maxScore: 3
         },
         {
-            id: 7,
-            type: "multiple-choice",
-            question: "Menționați o caracteristică a opiniei publice românești din 1914.",
-            options: [
-                "Susținerea intrării în război alături de Puterile Centrale",
-                "Dorința de eliberare a teritoriilor românești aflate sub stăpânire străină",
-                "Indiferența față de război",
-                "Opoziția față de Antanta"
+            id: 5,
+            type: "open-ended",
+            question: "Scrieţi o relaţie cauză-efect stabilită între două informaţii selectate din sursa B, precizând rolul fiecăreia dintre aceste informaţii (cauză, respectiv efect).",
+            keywords: [
+                "autoritatile", "rascoala", "tarilor romane", "Imperiul otoman",
+                "politic", "militar", "economic", "mii de oameni", "Sinan-Pasa", "Dunare"
             ],
-            correctAnswers: ["Dorința de eliberare a teritoriilor românești aflate sub stăpânire străină"],
-            maxScore: 3
+            aliases: [
+                "Autoritățile", "răscoala", "țărilor române", "sinan pasa", "Dunăre"
+            ],
+            maxScore: 7
+        },
+        {
+            id: 6,
+            type: "open-ended",
+            question: "Prezentați alte două acțiuni diplomatice la care au participat românii în secolele al XV-lea – al XVI-lea, în afara celei la care se referă sursa B.",
+            keywords: ["Tratatul de la Colomeea", "Tratatul de la Overchelauti"],
+            aliases: [
+                "Tratatul de la Overchelăuți", "Tratatul de la Iași", "Tratatul de la Hârlău",
+                "Tratatul de la Dealu", "Tratatul de la București"
+            ],
+            maxScore: 6
+        },
+        {
+            id: 7,
+            type: "open-ended",
+            question: "Menţionaţi o asemănare între două fapte istorice desfășurate de români în secolul al XIV-lea.",
+            keywords: [""],
+            aliases: [],
+            maxScore: 6
+        },
+        {
+            id: 8,
+            type: "open-ended",
+            question: "Numiţi o mare alianță precizată în sursa dată.",
+            keywords: ["Antanta"],
+            aliases: ["Antanta", "Puterile Centrale"],
+            maxScore: 2
+        },
+        {
+            id: 9,
+            type: "open-ended",
+            question: "Precizaţi secolul la care se referă sursa dată.",
+            keywords: ["XX-lea"],
+            aliases: [],
+            maxScore: 6
+        },
+        {
+            id: 10,
+            type: "open-ended",
+            question: "Menţionaţi șeful guvernului din 1914 și o caracteristică a opiniei publice din România, la care se referă sursa dată.",
+            keywords: [
+                "I.I.C. Bratianu", "eliberarea naționala", "austro-ungara",
+                "Antantei", "Romaniei", "Puterilor Centrale"
+            ],
+            aliases: [
+                "I.I.C. Brătianu", "eliberarea națională", "austro ungară",
+                "Antanta", "României", "Puterilor Centrale"
+            ],
+            maxScore: 6
+        },
+        {
+            id: 11,
+            type: "open-ended",
+            question: "Menţionaţi, din sursa dată, două informații referitoare la evenimentele din anul 1917.",
+            keywords: ["marasti", "Marasesti", "victorie romaneasca", "Primului Razboi Mondial", "Oituz"],
+            aliases: ["Mărăști", "Mărășești", "victorie românească", "Primului Război Mondial"],
+            maxScore: 6
         }
     ];
+
 
     let currentIndex = 0;
     const studentAnswers = [];

@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Subject Images Array
     const subjectImages = [
+        "../assets/1t.png",
+        "../assets/2t.png",
         "../assets/aureliaclosca.png", // Replace these with actual image paths
-        "../assets/aureliaclosca.png",
-        "../assets/aa.png"
+       
     ];
 
     let currentImageIndex = 0;
