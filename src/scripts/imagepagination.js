@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const subjectImages = [
         "../assets/1t.png",
         "../assets/2t.png",
-        "../assets/aureliaclosca.png", // Replace these with actual image paths
+
        
     ];
 
