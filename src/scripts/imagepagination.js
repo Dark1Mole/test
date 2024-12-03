@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Subject Images Array
     const subjectImages = [
-        "../assets/1t.png",
-        "../assets/2t.png",
+        "./src/assets/1t.png",
+        "./src/assets/2t.png",
 
        
     ];
