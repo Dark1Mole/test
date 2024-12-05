@@ -4,28 +4,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Test Bac - Test</title>
+    <title>Ghid Rezolvare BAC</title>
     <link rel="stylesheet" href="./src/style/input.css" />
     <link rel="stylesheet" href="./src/style/output.css" />
+    
+    <script src="./src/scripts/main.js" defer></script>
     <script src="./src/scripts/main.js" defer></script>
     <script src="./src/scripts/test.js" defer></script>
-    <script src="./src/scripts/imagepagination.js" defer></script>
+    <script src="./src/scripts/pajination2.js" defer></script>
+    <link rel="icon" href="./src/assets/logo.webp" type="image/x-icon">
+    <script>
+        // JavaScript for toggling the mobile menu
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleButton = document.getElementById("menuToggle");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            toggleButton.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+    </script>
 
 </head>
-
-<body class="font-poppins bg-background text-text">
+<body class="font-poppins bg-background text-text flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav class="bg-white shadow-md px-2 sm:px-8">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <a href="exemplu.html" id="exempluLink"
-                class="link text-base sm:text-lg hover:text-primary transition">Exemplu</a>
-            <a href="index.html" id="testLink"
-                class="link text-base sm:text-lg hover:text-primary transition font-bold">Test</a>
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="./src/assets/logo.webp" alt="Logo" class="h-8 sm:h-10 mr-3" />
+                <span class="text-lg sm:text-xl font-semibold"><a href="intro.html">Ghid de Rezolvare</a></span>
+            </div>
+    
+            <!-- Desktop Links -->
+            <div class="hidden sm:flex space-x-6">
+                <a href="exemplu.html" id="exempluLink"
+                    class="link text-base sm:text-lg hover:text-primary transition">Exemplu</a>
+                <a href="#" id="viewSubjectLink" class="link text-base sm:text-lg hover:text-primary transition">View
+                    Subject</a>
+                <a href="index.html" id="testLink" class="link text-base sm:text-lg hover:text-primary transition">Test</a>
+            </div>
+    
+            <!-- Hamburger Menu -->
+            <button id="menuToggle" class="sm:hidden focus:outline-none">
+                <svg class="h-6 w-6 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden sm:hidden flex flex-col px-4 py-2 bg-white font-semibold">
+            <a href="exemplu.html" class="link text-base hover:text-primary transition py-2">Exemplu</a>
+            <a href="#" id="viewSubjectLink2" class="link text-base hover:text-primary transition py-2">View Subject</a>
+            <a href="index.html" class="link text-base hover:text-primary transition py-2">Test</a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container mx-auto mt-12 px-4">
+    <main class="container mx-auto mt-12 px-4 flex-grow">
         <div id="questionContainer"
             class="bg-white shadow-lg rounded-lg p-6 sm:p-8 lg:p-10 w-full sm:w-4/5 lg:w-2/3 mx-auto">
             <!-- Questions will dynamically render here -->
@@ -42,7 +80,26 @@
         </div>
     </main>
 
-    <!-- Full-Screen Image Viewer Modal with Light Grey Background -->
+    <div id="modalContainer" class="fixed inset-0 bg-gray-500 bg-opacity-80 flex items-center justify-center hidden z-100">
+        <div class="relative bg-white rounded-lg shadow-lg max-w-screen-lg w-full max-h-screen overflow-hidden">
+            <!-- Close Button -->
+            <button id="modalCloseBtn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                &times;
+            </button>
+            <!-- Modal Content -->
+            <div class="flex flex-col items-center justify-center p-4 space-y-4">
+                <img id="modalImage" class="max-h-96 object-contain rounded-lg" src="" alt="Dynamic Content" />
+                <div class="flex justify-between w-full px-4">
+                    <button id="modalPrevBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
+                        Previous
+                    </button>
+                    <button id="modalNextBtn" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400">
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

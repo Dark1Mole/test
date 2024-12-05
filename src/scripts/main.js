@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const exempluLink = document.getElementById('exempluLink');
-    const testLink = document.getElementById('testLink');
+    const toggleButton = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const subjectModal = document.getElementById('subjectModal');
 
-    // Highlight the active link
-    if (window.location.pathname.includes('exemplu.html')) {
-        exempluLink.classList.add('text-primary', 'font-bold');
-    } else if (window.location.pathname.includes('test.html')) {
-        testLink.classList.add('text-primary', 'font-bold');
+    if (toggleButton && mobileMenu) {
+        toggleButton.addEventListener('click', () => {
+            // Toggle mobile menu visibility
+            mobileMenu.classList.toggle('hidden');
+
+        });
     }
 });
+

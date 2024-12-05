@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewSubjectLink2 = document.getElementById("viewSubjectLink2");
     // Carousel Images Array
     const images = [
-        "./src/assets/1t.png",
-        "./src/assets/2t.png",
+        "./src/assets/3t.png",
+        "./src/assets/4t.png",
     ];
 
     let currentImageIndex = 0;
