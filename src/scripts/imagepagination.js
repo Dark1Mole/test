@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalNextBtn = document.getElementById("modalNextBtn");
     const viewSubjectLink = document.getElementById("viewSubjectLink");
     const viewSubjectLink2 = document.getElementById("viewSubjectLink2");
+
     // Carousel Images Array
     const images = [
-        "./src/assets/1t.png",
-        "./src/assets/2t.png",
+        "./src/assets/3t.png",
+        "./src/assets/4t.png",
     ];
 
     let currentImageIndex = 0;
@@ -34,6 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         modalPrevBtn.disabled = currentImageIndex === 0;
         modalNextBtn.disabled = currentImageIndex === images.length - 1;
     };
+
+    // Open Image in New Tab
+    modalImage.addEventListener("click", () => {
+        window.open(modalImage.src, "_blank");
+    });
 
     // Event Listeners
     if (viewSubjectLink || viewSubjectLink2) {
